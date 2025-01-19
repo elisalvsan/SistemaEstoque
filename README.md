@@ -43,4 +43,4 @@ Este projeto foi desenvolvido com a ajuda do canal [Aprenda Fácil Tecnologia](h
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e enviar pull requests.
 
 ## Licença
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
