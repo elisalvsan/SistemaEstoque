@@ -349,10 +349,11 @@ public class FormularioClientes extends javax.swing.JFrame {
                 .addComponent(txtPesquisaNome, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnPesquisaNome)
-                .addContainerGap(296, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(painel_consultaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 854, Short.MAX_VALUE)
+                .addContainerGap())
         );
         painel_consultaLayout.setVerticalGroup(
             painel_consultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -370,9 +371,16 @@ public class FormularioClientes extends javax.swing.JFrame {
         painel_guias.addTab("Consulta de Clientes", painel_consulta);
 
         btnNovo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sistema/images/add1.png"))); // NOI18N
         btnNovo.setText("NOVO");
+        btnNovo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNovoActionPerformed(evt);
+            }
+        });
 
         btnSalvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sistema/images/salvar.png"))); // NOI18N
         btnSalvar.setText("SALVAR");
         btnSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -381,12 +389,15 @@ public class FormularioClientes extends javax.swing.JFrame {
         });
 
         btnEditar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sistema/images/editar.png"))); // NOI18N
         btnEditar.setText("EDITAR");
 
         btnExcluir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sistema/images/excluir.png"))); // NOI18N
         btnExcluir.setText("EXCLUIR");
 
         btnImprimir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sistema/images/printer.png"))); // NOI18N
         btnImprimir.setText("IMPRIMIR");
         btnImprimir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -400,18 +411,18 @@ public class FormularioClientes extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(painel_guias)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(40, 40, 40)
                 .addComponent(btnNovo)
-                .addGap(47, 47, 47)
+                .addGap(41, 41, 41)
                 .addComponent(btnSalvar)
-                .addGap(46, 46, 46)
+                .addGap(41, 41, 41)
                 .addComponent(btnEditar)
-                .addGap(45, 45, 45)
+                .addGap(41, 41, 41)
                 .addComponent(btnExcluir)
-                .addGap(42, 42, 42)
+                .addGap(41, 41, 41)
                 .addComponent(btnImprimir)
-                .addGap(63, 63, 63))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -426,7 +437,7 @@ public class FormularioClientes extends javax.swing.JFrame {
                     .addComponent(btnEditar)
                     .addComponent(btnExcluir)
                     .addComponent(btnImprimir))
-                .addGap(0, 18, Short.MAX_VALUE))
+                .addGap(0, 16, Short.MAX_VALUE))
         );
 
         pack();
@@ -463,6 +474,10 @@ public class FormularioClientes extends javax.swing.JFrame {
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnImprimirActionPerformed
+
+    private void btnNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNovoActionPerformed
 
     /**
      * @param args the command line arguments
