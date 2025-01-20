@@ -27,7 +27,7 @@ public class ClientesDAO {
     public void Salvar(Clientes obj) {
         try {
             //Criacão do SQL
-            String sql = "insert into tb_clientes (nome, rg, cpf, email, telefone, celular, cep, endereco, numero, complemento, cbairro, cidade, estado)"
+            String sql = "insert into tb_clientes (nome, rg, cpf, email, telefone, celular, cep, endereco, numero, complemento, bairro, cidade, estado)"
                     + "values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
             //Preparar o SQL para se conectar com o banco
             PreparedStatement stmt = conn.prepareStatement(sql);
@@ -50,7 +50,7 @@ public class ClientesDAO {
             stmt.close();
             JOptionPane.showMessageDialog(null, "Cliente salvo com sucesso");
         } catch (SQLException erro) {
-            JOptionPane.showMessageDialog(null,"Erro ao salvar o cliente" + erro);
+            JOptionPane.showMessageDialog(null, "Erro ao salvar o cliente" + erro);
         }
     }
 

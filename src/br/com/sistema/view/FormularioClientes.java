@@ -5,6 +5,9 @@
  */
 package br.com.sistema.view;
 
+import br.com.sistema.dao.ClientesDAO;
+import br.com.sistema.model.Clientes;
+
 /**
  *
  * @author Elisa
@@ -188,7 +191,7 @@ public class FormularioClientes extends javax.swing.JFrame {
         rUF.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         rUF.setText("Estado:");
 
-        cbUF.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbUF.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" }));
 
         rBairro.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         rBairro.setText("Bairro:");
@@ -464,7 +467,25 @@ public class FormularioClientes extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCpfActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-        // TODO add your handling code here:
+
+        Clientes obj = new Clientes();
+        obj.setNome(txtNome.getText());
+        obj.setRg(txtRg.getText());
+        obj.setCpf(txtCpf.getText());
+        obj.setEmail(txtEmail.getText());
+        obj.setTelefone(txtTelefone.getText());
+        obj.setCelular(txtCelular.getText());
+        obj.setCep(txtCep.getText());
+        obj.setEndereco(txtEndereco.getText());
+        obj.setNumero(Integer.valueOf(txtNumero.getText()));
+        obj.setComplemento(txtComplemento.getText());
+        obj.setBairro(txtBairro.getText());
+        obj.setCidade(txtCidade.getText());
+        obj.setEstado(cbUF.getSelectedItem().toString());
+
+        ClientesDAO dao = new ClientesDAO();
+        dao.Salvar(obj);
+
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnPesquisaNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisaNomeActionPerformed
