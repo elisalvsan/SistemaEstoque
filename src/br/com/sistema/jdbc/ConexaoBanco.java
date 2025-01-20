@@ -20,7 +20,7 @@ public class ConexaoBanco {
     final private String usuario = "root";
     final private String senha = "";
 
-    Connection pegarConexao() {
+    public Connection pegarConexao() {
         try {
             return DriverManager.getConnection(url, usuario, senha);
         } catch (SQLException e) {

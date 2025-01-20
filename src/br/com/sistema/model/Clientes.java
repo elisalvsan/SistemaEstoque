@@ -20,7 +20,7 @@ public class Clientes {
     private String Celular;
     private String Cep;
     private String Endereco;
-    private int Nummero;
+    private int Numero;
     private String Complemento;
     private String Bairro;
     private String Cidade;
@@ -98,12 +98,12 @@ public class Clientes {
         this.Endereco = Endereco;
     }
 
-    public int getNummero() {
-        return Nummero;
+    public int getNumero() {
+        return Numero;
     }
 
-    public void setNummero(int Nummero) {
-        this.Nummero = Nummero;
+    public void setNumero(int Numero) {
+        this.Numero = Numero;
     }
 
     public String getComplemento() {
