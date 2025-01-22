@@ -7,6 +7,7 @@ package br.com.sistema.view;
 
 import br.com.sistema.dao.ClientesDAO;
 import br.com.sistema.model.Clientes;
+import br.com.sistema.utilits.Utilitarios;
 import javax.swing.JOptionPane;
 
 /**
@@ -516,6 +517,9 @@ public class FormularioClientes extends javax.swing.JFrame {
         ClientesDAO dao = new ClientesDAO();
         dao.Salvar(obj);
 
+        Utilitarios util = new Utilitarios();
+        util.LimparTela(painel_dados_pessoais);
+
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnPesquisaNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisaNomeActionPerformed
@@ -527,7 +531,8 @@ public class FormularioClientes extends javax.swing.JFrame {
     }//GEN-LAST:event_btnImprimirActionPerformed
 
     private void btnNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoActionPerformed
-        // TODO add your handling code here:
+        Utilitarios util = new Utilitarios();
+        util.LimparTela(painel_dados_pessoais);
     }//GEN-LAST:event_btnNovoActionPerformed
 
     private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
