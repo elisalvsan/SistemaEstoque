@@ -77,10 +77,11 @@ public class FormularioClientes extends javax.swing.JFrame {
         btnImprimir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Cadastro de Clientes");
@@ -95,16 +96,18 @@ public class FormularioClientes extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        painel_guias.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        painel_guias.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
 
-        rCodigo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        rCodigo.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         rCodigo.setText("Código:");
 
-        rNome.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtCodigo.setEditable(false);
+
+        rNome.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         rNome.setText("Nome:");
 
         txtNome.addActionListener(new java.awt.event.ActionListener() {
@@ -113,7 +116,7 @@ public class FormularioClientes extends javax.swing.JFrame {
             }
         });
 
-        btnPesquisar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnPesquisar.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnPesquisar.setText("Pesquisar");
         btnPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,7 +124,7 @@ public class FormularioClientes extends javax.swing.JFrame {
             }
         });
 
-        rRG.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        rRG.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         rRG.setText("RG:");
 
         try {
@@ -135,7 +138,7 @@ public class FormularioClientes extends javax.swing.JFrame {
             }
         });
 
-        rCPF.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        rCPF.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         rCPF.setText("CPF:");
 
         try {
@@ -149,10 +152,10 @@ public class FormularioClientes extends javax.swing.JFrame {
             }
         });
 
-        rEmail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        rEmail.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         rEmail.setText("E-mail:");
 
-        rTelefone.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        rTelefone.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         rTelefone.setText("Telefone:");
 
         try {
@@ -166,7 +169,7 @@ public class FormularioClientes extends javax.swing.JFrame {
             }
         });
 
-        rCelular.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        rCelular.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         rCelular.setText("Celular:");
 
         try {
@@ -175,7 +178,7 @@ public class FormularioClientes extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
-        rCEP.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        rCEP.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         rCEP.setText("CEP:");
 
         try {
@@ -189,24 +192,24 @@ public class FormularioClientes extends javax.swing.JFrame {
             }
         });
 
-        rEndereco.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        rEndereco.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         rEndereco.setText("Endereço:");
 
-        rNumero.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        rNumero.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         rNumero.setText("Nº:");
 
-        rUF.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        rUF.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         rUF.setText("Estado:");
 
         cbUF.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" }));
 
-        rBairro.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        rBairro.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         rBairro.setText("Bairro:");
 
-        rCidade.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        rCidade.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         rCidade.setText("Cidade:");
 
-        rComplemento.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        rComplemento.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         rComplemento.setText("Complemento:");
 
         javax.swing.GroupLayout painel_dados_pessoaisLayout = new javax.swing.GroupLayout(painel_dados_pessoais);
@@ -233,36 +236,6 @@ public class FormularioClientes extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(painel_dados_pessoaisLayout.createSequentialGroup()
-                        .addComponent(rNome)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnPesquisar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rRG)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtRg, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rCPF)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painel_dados_pessoaisLayout.createSequentialGroup()
-                        .addComponent(rCEP)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtCep, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rEndereco)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rNumero)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rUF)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cbUF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painel_dados_pessoaisLayout.createSequentialGroup()
                         .addComponent(rBairro)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -273,13 +246,44 @@ public class FormularioClientes extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(rComplemento)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtComplemento, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(134, Short.MAX_VALUE))
+                        .addComponent(txtComplemento, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(painel_dados_pessoaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painel_dados_pessoaisLayout.createSequentialGroup()
+                            .addComponent(rCEP)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(txtCep, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(rEndereco)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtEndereco)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(rNumero)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(rUF)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(cbUF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painel_dados_pessoaisLayout.createSequentialGroup()
+                            .addComponent(rNome)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(btnPesquisar)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(rRG)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtRg, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(rCPF)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(201, Short.MAX_VALUE))
         );
         painel_dados_pessoaisLayout.setVerticalGroup(
             painel_dados_pessoaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painel_dados_pessoaisLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(21, 21, 21)
                 .addGroup(painel_dados_pessoaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rCodigo)
                     .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -304,12 +308,12 @@ public class FormularioClientes extends javax.swing.JFrame {
                 .addGroup(painel_dados_pessoaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rCEP)
                     .addComponent(txtCep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rEndereco)
                     .addComponent(txtEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rNumero)
                     .addComponent(txtNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cbUF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rUF))
+                    .addComponent(rUF)
+                    .addComponent(rEndereco))
                 .addGap(18, 18, 18)
                 .addGroup(painel_dados_pessoaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rBairro)
@@ -318,15 +322,15 @@ public class FormularioClientes extends javax.swing.JFrame {
                     .addComponent(txtCidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rComplemento)
                     .addComponent(txtComplemento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         painel_guias.addTab("Dados Pessoais", painel_dados_pessoais);
 
-        rPesquisaNome.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        rPesquisaNome.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         rPesquisaNome.setText("Nome:");
 
-        btnPesquisaNome.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnPesquisaNome.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnPesquisaNome.setText("Pesquisar");
         btnPesquisaNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -334,7 +338,7 @@ public class FormularioClientes extends javax.swing.JFrame {
             }
         });
 
-        tabela_clientes.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        tabela_clientes.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         tabela_clientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -359,7 +363,7 @@ public class FormularioClientes extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(painel_consultaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 854, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 952, Short.MAX_VALUE)
                 .addContainerGap())
         );
         painel_consultaLayout.setVerticalGroup(
@@ -371,13 +375,12 @@ public class FormularioClientes extends javax.swing.JFrame {
                     .addComponent(txtPesquisaNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnPesquisaNome))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE))
         );
 
         painel_guias.addTab("Consulta de Clientes", painel_consulta);
 
-        btnNovo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnNovo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sistema/images/add1.png"))); // NOI18N
         btnNovo.setText("NOVO");
         btnNovo.addActionListener(new java.awt.event.ActionListener() {
@@ -386,7 +389,7 @@ public class FormularioClientes extends javax.swing.JFrame {
             }
         });
 
-        btnSalvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnSalvar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sistema/images/salvar.png"))); // NOI18N
         btnSalvar.setText("SALVAR");
         btnSalvar.addActionListener(new java.awt.event.ActionListener() {
@@ -395,15 +398,15 @@ public class FormularioClientes extends javax.swing.JFrame {
             }
         });
 
-        btnEditar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnEditar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sistema/images/editar.png"))); // NOI18N
         btnEditar.setText("EDITAR");
 
-        btnExcluir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnExcluir.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sistema/images/excluir.png"))); // NOI18N
         btnExcluir.setText("EXCLUIR");
 
-        btnImprimir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnImprimir.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sistema/images/printer.png"))); // NOI18N
         btnImprimir.setText("IMPRIMIR");
         btnImprimir.addActionListener(new java.awt.event.ActionListener() {
@@ -417,9 +420,8 @@ public class FormularioClientes extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(painel_guias)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnNovo)
                 .addGap(41, 41, 41)
                 .addComponent(btnSalvar)
@@ -429,22 +431,23 @@ public class FormularioClientes extends javax.swing.JFrame {
                 .addComponent(btnExcluir)
                 .addGap(41, 41, 41)
                 .addComponent(btnImprimir)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(93, 93, 93))
+            .addComponent(painel_guias)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(painel_guias, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(painel_guias, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnNovo)
                     .addComponent(btnSalvar)
                     .addComponent(btnEditar)
                     .addComponent(btnExcluir)
                     .addComponent(btnImprimir))
-                .addGap(0, 16, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         pack();
