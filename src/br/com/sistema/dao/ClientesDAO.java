@@ -9,6 +9,7 @@ import br.com.sistema.jdbc.ConexaoBanco;
 import br.com.sistema.model.Clientes;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
@@ -52,6 +53,36 @@ public class ClientesDAO {
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null, "Erro ao salvar o cliente" + erro);
         }
+    }
+
+    public Clientes BuscarCliente(String nome) {
+        try {
+            String sql = "SELECT * FROM tb_clientes WHERE nome =?";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, nome);
+            ResultSet rs = stmt.executeQuery();
+
+            Clientes obj = new Clientes();
+            if (rs.next()) {
+                obj.setId(rs.getInt("id"));
+                obj.setNome(rs.getString("nome"));
+                obj.setRg(rs.getString("rg"));
+                obj.setCpf(rs.getString("cpf"));
+                obj.setEmail(rs.getString("email"));
+                obj.setTelefone(rs.getString("telefone"));
+                obj.setCelular(rs.getString("celular"));
+                obj.setCep(rs.getString("cep"));
+                obj.setEndereco(rs.getString("endereco"));
+                obj.setNumero(rs.getInt("numero"));
+                obj.setComplemento(rs.getString("complemento"));
+                obj.setBairro(rs.getString("bairro"));
+                obj.setCidade(rs.getString("cidade"));
+                obj.setEstado(rs.getString("estado"));
+            }
+        } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null, "Erro ao buscar cliente" + erro);
+        }
+        return null;
     }
 
 }
