@@ -57,7 +57,7 @@ public class ClientesDAO {
 
     public Clientes BuscarCliente(String nome) {
         try {
-            String sql = "SELECT * FROM tb_clientes WHERE nome =?";
+            String sql = "select * from tb_clientes where nome = ?";
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, nome);
             ResultSet rs = stmt.executeQuery();
@@ -79,6 +79,7 @@ public class ClientesDAO {
                 obj.setCidade(rs.getString("cidade"));
                 obj.setEstado(rs.getString("estado"));
             }
+            return obj;
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null, "Erro ao buscar cliente" + erro);
         }
