@@ -8,6 +8,7 @@ package br.com.sistema.view;
 import br.com.sistema.dao.ClientesDAO;
 import br.com.sistema.model.Clientes;
 import br.com.sistema.utilits.Utilitarios;
+import java.awt.event.KeyEvent;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -147,6 +148,11 @@ public class FormularioClientes extends javax.swing.JFrame {
         txtNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNomeActionPerformed(evt);
+            }
+        });
+        txtNome.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtNomeKeyPressed(evt);
             }
         });
 
@@ -562,7 +568,7 @@ public class FormularioClientes extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnPesquisaNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisaNomeActionPerformed
-        String nome = "%"+txtPesquisaNome.getText()+"%";
+        String nome = "%" + txtPesquisaNome.getText() + "%";
         ClientesDAO dao = new ClientesDAO();
         List<Clientes> lista = dao.filtrar(nome);
 
@@ -606,7 +612,7 @@ public class FormularioClientes extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowActivated
 
     private void txtPesquisaNomeKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPesquisaNomeKeyReleased
-        String nome = "%"+txtPesquisaNome.getText()+"%";
+        String nome = "%" + txtPesquisaNome.getText() + "%";
         ClientesDAO dao = new ClientesDAO();
         List<Clientes> lista = dao.filtrar(nome);
 
@@ -631,6 +637,34 @@ public class FormularioClientes extends javax.swing.JFrame {
             });
         }
     }//GEN-LAST:event_txtPesquisaNomeKeyReleased
+
+    private void txtNomeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNomeKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            String nome = txtNome.getText();
+            Clientes obj = new Clientes();
+            ClientesDAO dao = new ClientesDAO();
+
+            obj = dao.BuscarCliente(nome);
+            if (obj.getNome() != null) {
+                txtCodigo.setText(String.valueOf(obj.getId()));
+                txtNome.setText(obj.getNome());
+                txtRg.setText(obj.getRg());
+                txtCpf.setText(obj.getCpf());
+                txtEmail.setText(obj.getEmail());
+                txtTelefone.setText(obj.getTelefone());
+                txtCelular.setText(obj.getCelular());
+                txtCep.setText(obj.getCep());
+                txtEndereco.setText(obj.getEndereco());
+                txtNumero.setText(String.valueOf(obj.getNumero()));
+                txtComplemento.setText(obj.getComplemento());
+                txtBairro.setText(obj.getBairro());
+                txtCidade.setText(obj.getCidade());
+                cbUF.setSelectedItem(obj.getEndereco());
+            } else {
+                JOptionPane.showMessageDialog(null, "Cliente não encontrado");
+            }
+        }
+    }//GEN-LAST:event_txtNomeKeyPressed
 
     /**
      * @param args the command line arguments
