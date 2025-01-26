@@ -393,6 +393,11 @@ public class FormularioClientes extends javax.swing.JFrame {
                 "Id", "Nome", "RG", "CPF", "Email", "Telefone", "Celular", "CEP", "Endereco", "Numero", "Complemento", "Bairro", "Cidade", "Estado"
             }
         ));
+        tabela.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tabelaMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tabela);
 
         javax.swing.GroupLayout painel_consultaLayout = new javax.swing.GroupLayout(painel_consulta);
@@ -665,6 +670,24 @@ public class FormularioClientes extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_txtNomeKeyPressed
+
+    private void tabelaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaMouseClicked
+        painel_guias.setSelectedIndex(0);
+        txtCodigo.setText(tabela.getValueAt(tabela.getSelectedRow(), 0).toString());
+        txtNome.setText(tabela.getValueAt(tabela.getSelectedRow(), 1).toString());
+        txtRg.setText(tabela.getValueAt(tabela.getSelectedRow(), 2).toString());
+        txtCpf.setText(tabela.getValueAt(tabela.getSelectedRow(), 3).toString());
+        txtEmail.setText(tabela.getValueAt(tabela.getSelectedRow(), 4).toString());
+        txtTelefone.setText(tabela.getValueAt(tabela.getSelectedRow(), 5).toString());
+        txtCelular.setText(tabela.getValueAt(tabela.getSelectedRow(), 6).toString());
+        txtCep.setText(tabela.getValueAt(tabela.getSelectedRow(), 7).toString());
+        txtEndereco.setText(tabela.getValueAt(tabela.getSelectedRow(), 8).toString());
+        txtNumero.setText(tabela.getValueAt(tabela.getSelectedRow(), 9).toString());
+        txtComplemento.setText(tabela.getValueAt(tabela.getSelectedRow(), 10).toString());
+        txtBairro.setText(tabela.getValueAt(tabela.getSelectedRow(), 11).toString());
+        txtCidade.setText(tabela.getValueAt(tabela.getSelectedRow(), 12).toString());
+        cbUF.setSelectedItem(tabela.getValueAt(tabela.getSelectedRow(), 13).toString());
+    }//GEN-LAST:event_tabelaMouseClicked
 
     /**
      * @param args the command line arguments
