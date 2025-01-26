@@ -8,7 +8,9 @@ package br.com.sistema.view;
 import br.com.sistema.dao.ClientesDAO;
 import br.com.sistema.model.Clientes;
 import br.com.sistema.utilits.Utilitarios;
+import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -19,6 +21,32 @@ public class FormularioClientes extends javax.swing.JFrame {
     /**
      * Creates new form FormularioClientes
      */
+    public void listar() {
+        ClientesDAO dao = new ClientesDAO();
+        List<Clientes> lista = dao.listar();
+
+        DefaultTableModel dados = (DefaultTableModel) tabela.getModel();
+        dados.setNumRows(0);
+        for (Clientes c : lista) {
+            dados.addRow(new Object[]{
+                c.getId(),
+                c.getNome(),
+                c.getRg(),
+                c.getCpf(),
+                c.getEmail(),
+                c.getTelefone(),
+                c.getCelular(),
+                c.getCep(),
+                c.getEndereco(),
+                c.getNumero(),
+                c.getComplemento(),
+                c.getBairro(),
+                c.getCidade(),
+                c.getEstado()
+            });
+        }
+    }
+
     public FormularioClientes() {
         initComponents();
     }
@@ -70,7 +98,7 @@ public class FormularioClientes extends javax.swing.JFrame {
         txtPesquisaNome = new javax.swing.JTextField();
         btnPesquisaNome = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tabela_clientes = new javax.swing.JTable();
+        tabela = new javax.swing.JTable();
         btnNovo = new javax.swing.JButton();
         btnSalvar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
@@ -79,6 +107,11 @@ public class FormularioClientes extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -339,8 +372,8 @@ public class FormularioClientes extends javax.swing.JFrame {
             }
         });
 
-        tabela_clientes.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        tabela_clientes.setModel(new javax.swing.table.DefaultTableModel(
+        tabela.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        tabela.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -348,7 +381,7 @@ public class FormularioClientes extends javax.swing.JFrame {
                 "Id", "Nome", "RG", "CPF", "Email", "Telefone", "Celular", "CEP", "Endereco", "Numero", "Complemento", "Bairro", "Cidade", "Estado"
             }
         ));
-        jScrollPane1.setViewportView(tabela_clientes);
+        jScrollPane1.setViewportView(tabela);
 
         javax.swing.GroupLayout painel_consultaLayout = new javax.swing.GroupLayout(painel_consulta);
         painel_consulta.setLayout(painel_consultaLayout);
@@ -539,6 +572,10 @@ public class FormularioClientes extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNomeActionPerformed
 
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        listar();
+    }//GEN-LAST:event_formWindowActivated
+
     /**
      * @param args the command line arguments
      */
@@ -604,7 +641,7 @@ public class FormularioClientes extends javax.swing.JFrame {
     private javax.swing.JLabel rRG;
     private javax.swing.JLabel rTelefone;
     private javax.swing.JLabel rUF;
-    private javax.swing.JTable tabela_clientes;
+    private javax.swing.JTable tabela;
     private javax.swing.JTextField txtBairro;
     private javax.swing.JFormattedTextField txtCelular;
     private javax.swing.JFormattedTextField txtCep;
